@@ -1,0 +1,16 @@
+p {
+  animation-duration: 1s;
+  animation-name: mirror;
+}
+
+@keyframes mirror {
+  from {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+  
+  to {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+}
