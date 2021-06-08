@@ -40,24 +40,13 @@
          }
       </style>
       <script>
-         document.getElementById("doomerAudio").play();
-         document.getElementById("bloomerAudio").play();
+         
          document.getElementById("bloomerAudio").volume = 0.0;
          document.getElementById("doomerAudio").volume = 0.5;
          
-         function swapVolume(){
-            if(document.getElementById("bloomerAudio").volume == 0.0){
-               document.getElementById("bloomerAudio").volume = 0.5;
-               document.getElementById("doomerAudio").volume = 0.0;
-            } else{
-               document.getElementById("bloomerAudio").volume = 0.0;
-               document.getElementById("doomerAudio").volume = 0.5;
-            }
-         }
-         
          function playDoomer(){
-         	//document.getElementById("bloomerAudio").pause();
-         	//document.getElementById("doomerAudio").play();
+         	document.getElementById("bloomerAudio").pause();
+         	document.getElementById("doomerAudio").play();
          }
          
          function playBloomer(){
@@ -67,8 +56,8 @@
          
       </script>
    </head>
-   <body onmouseenter="swapVolume()" onmouseout="swapVolume()" bgcolor=”#000000" >
-      <audio id="doomerAudio" src="doomer_audio.mp3" type="audio/mpeg" preload="auto" autoplay="autoplay">
+   <body onload="playDoomer()" onmouseenter="playBloomer()" onmouseout="playDoomer()" bgcolor=”#000000" >
+      <audio id="doomerAudio" src="doomer_audio.mp3" type="audio/mpeg" preload="auto">
       </audio>
       <audio id="bloomerAudio" src="bloomer_audio.mp3" type="audio/mpeg" preload="auto">
       </audio>
