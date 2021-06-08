@@ -25,20 +25,20 @@
       ba.volume = 0.5;
       ba.pitch = 1.2;
 
-      var playOnLoad = () => da.play();
+      var playOnLoad = () => {
+        da.play();
+        ba.play();
+        ba.volume = 0;
+      }
 
       function playDoomer() {
-        if (ba.isPlaying) {
-          ba.pause();
-          da.play();
-        }
+        da.volume = 0.5;
+        ba.volume = 0;
       }
 
       function playBloomer() {
-        if (da.isPlaying) {
-          da.pause();
-          ba.play();
-        }
+        da.volume = 0;
+        ba.volume = 0.5;
       }
 
     </script>
