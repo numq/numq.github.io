@@ -40,7 +40,6 @@
          }
       </style>
       <script>
-         
          document.getElementById("bloomerAudio").volume = 0.0;
          document.getElementById("doomerAudio").volume = 0.5;
          
@@ -64,7 +63,15 @@
       <div class="container">
          <img id="doomerImage" src="doomer_img.jpg" alt="Doomer" class="image"></img>
          <div class="overlay">
-            <img id="bloomerImage" src="bloomer_img.jpg" alt="Bloomer" class="image"></img>
+            <img id="bloomerImage" src="bloomer_img.jpg" alt="Bloomer" class="image">
+            <style>
+               animation: mirror 1s infinite;
+            </style>
+            @keyframes mirror {
+            0%{ transform: rotateX(0deg); }
+            100%{ transform: rotateX(180deg); }
+            }
+            </img>
          </div>
       </div>
    </body>
