@@ -17,14 +17,17 @@
     <audio id="bloomerAudio" src="/bloomer_audio.mp3" type="audio/mpeg" loop="loop"></audio>
 
     <script>
+      const doomerAudio = document.getElementById("doomerAudio");
+      const bloomerAudio = document.getElementById("bloomerAudio");
+
       function playDoomer() {
-        document.getElementById("bloomerAudio").pause();
-        document.getElementById("doomerAudio").play();
+        bloomerAudio.pause();
+        doomerAudio.play();
       }
 
       function playBloomer() {
-        document.getElementById("doomerAudio").pause();
-        document.getElementById("bloomerAudio").play();
+        doomerAudio.pause();
+        bloomerAudio.play();
       }
 
     </script>
@@ -32,4 +35,3 @@
   </body>
 
 </html>
-
