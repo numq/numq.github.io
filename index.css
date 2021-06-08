@@ -1,8 +1,5 @@
 #bloomerImage {
-  animation-name: mirror;
-  animation-delay: 1s;
-  animation-duration: infinite;
-  position: relative;
+  animation: mirror infinite;
 }
 
 @keyframes mirror {
