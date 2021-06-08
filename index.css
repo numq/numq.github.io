@@ -8,15 +8,9 @@ p {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
   }
-  
-  to {
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
-  }
 }
 
-ing:hover {
+img:hover {
   animation-name: example;
-  animation-delay: 1s;
   animation-duration: infinite;
 }
