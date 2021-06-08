@@ -3,6 +3,16 @@
   animation:mirror infinite;
 }
 
+.container {
+  position:relative;
+  animation:mirror infinite;
+}
+
+.img {
+  position:relative;
+  animation:mirror infinite;
+}
+
 @keyframes mirror {
   transform: rotateX(180deg);
 }
