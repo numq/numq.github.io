@@ -18,3 +18,5 @@ html {
 	transform: rotateY(180deg);
 }
  */
+
+@keyframes mirror{ transform: rotateY(180deg) }
