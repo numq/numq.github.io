@@ -40,7 +40,6 @@
          }
       </style>
       <script>
-         
          document.getElementById("bloomerAudio").volume = 0.5;
          document.getElementById("doomerAudio").volume = 0.5;
          
@@ -57,14 +56,21 @@
       </script>
    </head>
    <body onload="playDoomer()" onmouseenter="playBloomer()" onmouseout="playDoomer()" bgcolor=”black" >
-      <audio id="doomerAudio" src="doomer_audio.mp3" type="audio/mpeg" preload="auto">
+      <audio id="doomerAudio" src="doomer_audio.mp3" type="audio/mpeg" preload="auto" loop="loop">
       </audio>
-      <audio id="bloomerAudio" src="bloomer_audio.mp3" type="audio/mpeg" preload="auto">
+      <audio id="bloomerAudio" src="bloomer_audio.mp3" type="audio/mpeg" preload="auto" loop="loop">
       </audio>
       <div class="container">
          <img id="doomerImage" src="doomer_img.jpg" alt="Doomer" class="image"></img>
          <div class="overlay">
-            <img id="bloomerImage" src="bloomer_img.jpg" alt="Bloomer" class="image"></img>
+            <img id="bloomerImage" src="bloomer_img.jpg" alt="Bloomer" class="image">
+            <style>
+               img:hover {
+               -webkit-transform: scaleX(-1);
+               transform: scaleX(-1);
+               }
+            </style>
+            </img>
          </div>
       </div>
    </body>
