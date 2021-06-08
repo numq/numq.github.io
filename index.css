@@ -11,6 +11,6 @@ p {
 }
 
 img:hover {
-  animation-name: example;
+  animation-name: mirror;
   animation-duration: infinite;
 }
