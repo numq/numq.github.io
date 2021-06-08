@@ -1,4 +1,5 @@
 .overlay {
+  position:relative;
   animation:mirror 1s infinite;
   -webkit-animation:mirror 1s infinite;
 }
