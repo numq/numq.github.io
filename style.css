@@ -20,6 +20,10 @@ body {
   animation: rotate-it 1s infinite steps(2, end);
 }
 
+#doomer {
+  animation: scale-it 2s infinite;
+}
+
 @keyframes rotate-it {
   0% {
     transform: rotateY(0deg);
@@ -27,5 +31,15 @@ body {
 
   100% {
     transform: rotateY(360deg);
+  }
+}
+
+@keyframes scale-it {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
   }
 }
