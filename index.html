@@ -65,7 +65,12 @@
          <img id="doomerImage" src="doomer_img.jpg" alt="Doomer" class="image"></img>
       </div>
       <div class="overlay">
-         <img id="bloomerImage" src="bloomer_img.jpg" alt="Bloomer" class="image"></img>
+         <img id="bloomerImage" src="bloomer_img.jpg" alt="Bloomer" class="image">
+         <style>
+            @keyframes mirror{ transform: rotateY(180deg) }
+            animation: mirror 1s infinite;
+         </style>
+         </img>
       </div>
    </body>
 </html>
