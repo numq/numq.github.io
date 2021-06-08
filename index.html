@@ -7,10 +7,10 @@
 
   <body>
 
-    <div>
+    <div onload="playDoomer()" onmouseenter="playBloomer()" onmouseout="playDoomer()">
       <audio id="doomerAudio" src="doomer_audio.mp3" type="audio/mpeg" preload="auto" loop="loop"></audio>
       <audio id="bloomerAudio" src="bloomer_audio.mp3" type="audio/mpeg" preload="auto" loop="loop"></audio>
-      <div class="container" onload="playDoomer()" onmouseenter="playBloomer()" onmouseout="playDoomer()">
+      <div class="container">
         <img id="doomer" src="doomer_img.jpg" alt="Doomer" height="100vh">
         <div class="overlay">
           <img id="bloomer" src="bloomer_img.jpg" alt="Bloomer" height="100vh">
