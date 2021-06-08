@@ -2,7 +2,7 @@ html {
   background: black;
 }
 
-.overlay {
+.img {
   animation: rotate 2s infinite;
 }
 
