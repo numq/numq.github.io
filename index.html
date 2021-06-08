@@ -46,18 +46,21 @@
          da.volume = 0.5;
          ba.volume = 0.5;
          
+         document.getElementById("bloomerAudio").volume = 0.5;
+         document.getElementById("doomerAudio").volume = 0.5;
+         
          function playDoomer(){
-         	//document.getElementById("bloomerAudio").pause();
-         	//document.getElementById("doomerAudio").play();
-            ba.pause();
-            da.play();
+         	document.getElementById("bloomerAudio").pause();
+         	document.getElementById("doomerAudio").play();
+            //ba.pause();
+            //da.play();
          }
          
          function playBloomer(){
-         	//document.getElementById("doomerAudio").pause();
-         	//document.getElementById("bloomerAudio").play();
-            da.pause();
-            ba.play();
+         	document.getElementById("doomerAudio").pause();
+         	document.getElementById("bloomerAudio").play();
+            //da.pause();
+            //ba.play();
          }
          
       </script>
