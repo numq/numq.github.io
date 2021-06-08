@@ -27,10 +27,11 @@
          opacity: 0;
          transition: .5s ease;
          background-color: #000000;
-         animation: mirror 1s infinite;
+         animation: mirror 1s infinite linear;
          }
          .container:hover .overlay {
          opacity: 1;
+            animation: mirror 1s infinite linear;
          }
          .text {
          color: white;
