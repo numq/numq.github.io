@@ -2,19 +2,10 @@ body {
   background: black;
 }
 
-.container {
-  position: relative;
-  display: block;
-}
-
 .overlay {
   position: absolute;
   transition: 0.5s ease;
   display: none;
-}
-
-.container:hover {
-  display: block;
 }
 
 .container:hover .overlay {
