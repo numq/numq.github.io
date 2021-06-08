@@ -3,30 +3,9 @@
 
   <head>
     <link href="/style.css" rel="stylesheet">
-
-    <script>
-      var da = document.getElementById("doomerAudio");
-      var ba = document.getElementById("bloomerAudio");
-
-      da.volume = 0.5;
-      da.pitch = 0.8;
-      ba.volume = 0.5;
-      ba.pitch = 1.2;
-
-      function playDoomer() {
-          ba.pause();
-          da.play();
-      }
-
-      function playBloomer() {
-          da.pause();
-          ba.play();
-      }
-
-    </script>
   </head>
 
-  <body onload="playDoomer()" onmouseenter="playBloomer()" onmouseout="playDoomer()">
+  <body onload="playOnLoad()" onmouseenter="playBloomer()" onmouseout="playDoomer()">
 
     <audio id="doomerAudio" src="doomer_audio.mp3" type="audio/mpeg" preload="auto" loop="loop"></audio>
     <audio id="bloomerAudio" src="bloomer_audio.mp3" type="audio/mpeg" preload="auto" loop="loop"></audio>
@@ -36,6 +15,33 @@
         <img id="bloomer" src="bloomer_img.jpg" alt="Bloomer" height="auto" width="auto">
       </div>
     </div>
+
+    <script type="text/javascript">
+      var da = document.getElementById("doomerAudio");
+      var ba = document.getElementById("bloomerAudio");
+
+      da.volume = 0.5;
+      da.pitch = 0.8;
+      ba.volume = 0.5;
+      ba.pitch = 1.2;
+
+      var playOnLoad = () => da.play();
+
+      function playDoomer() {
+        if (ba.isPlaying) {
+          ba.pause();
+          da.play();
+        }
+      }
+
+      function playBloomer() {
+        if (da.isPlaying) {
+          da.pause();
+          ba.play();
+        }
+      }
+
+    </script>
 
   </body>
 
