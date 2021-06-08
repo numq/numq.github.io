@@ -1,19 +1,19 @@
 html {
-  background: black;
+	background: black;
 }
 
 .img {
-  position: absolute;
-  animation: rotate 2s infinite;
-  animation-fill-mode: forwards;
+	position: absolute;
+	animation: rotate 2s infinite;
+	animation-fill-mode: forwards;
 }
 
 #bloomerImage {
-  position: absolute;
-  animation: rotate 2s infinite;
-  animation-fill-mode: forwards;
+	position: absolute;
+	animation: rotate 2s infinite;
+	animation-fill-mode: forwards;
 }
 
 @keyframes rotate {
-  transform: rotateY(180deg);
+	transform: rotateY(180deg);
 }
