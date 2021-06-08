@@ -2,7 +2,7 @@ html {
 	background: black;
 }
 
-.img {
+/* .img {
 	position: absolute;
 	animation: rotate 2s infinite;
 	animation-fill-mode: forwards;
@@ -17,3 +17,4 @@ html {
 @keyframes rotate {
 	transform: rotateY(180deg);
 }
+ */
