@@ -5,20 +5,18 @@
     <link href="/style.css" rel="stylesheet">
 
     <script>
+      var doomerAudio = document.getElementById("doomerAudio");
+      var bloomerAudio = document.getElementById("bloomerAudio");
+
+      doomerAudio.volume = 0.5;
+      bloomerAudio.volume = 0.5;
+
       function playDoomer() {
-        var doomerAudio = document.getElementById("doomerAudio");
-        var bloomerAudio = document.getElementById("bloomerAudio");
-        doomerAudio.volume = 0.5;
-        bloomerAudio.volume = 0.5;
         bloomerAudio.pause();
         doomerAudio.play();
       }
 
       function playBloomer() {
-        var doomerAudio = document.getElementById("doomerAudio");
-        var bloomerAudio = document.getElementById("bloomerAudio");
-        doomerAudio.volume = 0.5;
-        bloomerAudio.volume = 0.5;
         doomerAudio.pause();
         bloomerAudio.play();
       }
@@ -40,4 +38,3 @@
   </body>
 
 </html>
-
