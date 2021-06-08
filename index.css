@@ -1,7 +1,7 @@
 .overlay {
   position:relative;
-  animation:mirror 2s infinite;
-  -webkit-animation:mirror 1s infinite;
+  animation:mirror 4s infinite;
+  -webkit-animation:mirror 4s infinite;
 }
 
 @keyframes mirror {
