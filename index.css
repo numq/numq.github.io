@@ -1,10 +1,10 @@
 #bloomerImage {
-  animation-name: mirror;
-  animation-delay: 1s;
-  animation-duration: infinite;
+  -webkit-animation-name: mirror;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-duration: infinite;
 }
 
-@keyframes mirror {
+@-webkit-keyframes mirror {
   from {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
