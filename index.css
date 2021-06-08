@@ -5,8 +5,6 @@
 }
 
 @keyframes mirror {
-  from {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
-  }
 }
