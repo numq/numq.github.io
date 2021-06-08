@@ -4,7 +4,9 @@ html {
 .overlay {
   animation: pulse 5s infinite;
 }
-
+.bloomerImage {
+  animation: pulse 5s infinite;
+}
 @keyframes pulse {
   0% {
     background-color: #001F3F;
