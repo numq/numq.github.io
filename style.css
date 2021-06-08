@@ -3,13 +3,13 @@ html {
 }
 
 .img {
-  position: relative;
+  position: absolute;
   animation: rotate 2s infinite;
   animation-fill-mode: forwards;
 }
 
 #bloomerImage {
-  position: relative;
+  position: absolute;
   animation: rotate 2s infinite;
   animation-fill-mode: forwards;
 }
