@@ -1,3 +1,6 @@
+html {
+  background: black;
+}
 .overlay {
   position:relative;
   animation:slideIn infinite linear;
