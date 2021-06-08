@@ -1,6 +1,7 @@
-p {
-  animation-duration: 1s;
+#bloomerImage {
   animation-name: mirror;
+  animation-delay: 1s;
+  animation-duration: infinite;
 }
 
 @keyframes mirror {
@@ -8,9 +9,4 @@ p {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
   }
-}
-
-img {
-  animation-name: mirror;
-  animation-duration: infinite;
 }
