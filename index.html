@@ -45,29 +45,23 @@
          
          da.volume = 0.1;
          ba.volume = 0.1;
-         //document.getElementById("doomerAudio").volume = 0.1;
-         //document.getElementById("bloomerAudio").volume = 0.1;
          
          function playDoomer(){
          	document.getElementById("bloomerAudio").pause();
          	document.getElementById("doomerAudio").play();
-         	//ba.pause();
-         	//da.play();
          }
          
          function playBloomer(){
          	document.getElementById("doomerAudio").pause();
          	document.getElementById("bloomerAudio").play();
-         	//da.pause();
-         	//ba.play();
          }
          
       </script>
    </head>
    <body onload="playDoomer()" onmouseenter="playBloomer()" onmouseout="playDoomer()">
-      <audio id="doomerAudio" src="C:\Users\Alerion\Documents\DoomerBloomer\doomer_audio.mp3" type="audio/mpeg" preload="auto" autoplay="autoplay">
+      <audio id="doomerAudio" src="https://github.com/numq/numq.github.io/blob/main/doomer_audio.mp3" type="audio/mpeg" preload="auto" autoplay="autoplay">
       </audio>
-      <audio id="bloomerAudio" src="C:\Users\Alerion\Documents\DoomerBloomer\bloomer_audio.mp3" type="audio/mpeg" preload="auto" autoplay="autoplay">
+      <audio id="bloomerAudio" src="https://github.com/numq/numq.github.io/blob/main/bloomer_audio.mp3" type="audio/mpeg" preload="auto" autoplay="autoplay">
       </audio>
       <div class="container">
          <img id="doomerImage" src="https://i.ytimg.com/vi/wcaZcbain2s/maxresdefault.jpg" alt="Doomer" class="image"></img>
