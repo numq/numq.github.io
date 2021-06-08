@@ -2,6 +2,10 @@ html {
   background: black;
 }
 
+.overlay {
+  animation: rotate 2s infinite;
+}
+
 #bloomerImage {
   animation: rotate 2s infinite;
 }
