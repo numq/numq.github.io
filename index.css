@@ -1,11 +1,11 @@
 .overlay {
   position:relative;
-  animation:slideIn infinite;
+  animation:slideIn infinite linear;
 }
 
 .container {
   position:relative;
-  animation:slideIn infinite;
+  animation:slideIn infinite linear;
 }
 
 .img {
