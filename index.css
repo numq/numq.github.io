@@ -14,3 +14,9 @@ p {
     transform: scaleX(1);
   }
 }
+
+ing:hover {
+  animation-name: example;
+  animation-delay: 1s;
+  animation-duration: infinite;
+}
