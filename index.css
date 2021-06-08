@@ -1,5 +1,5 @@
 #bloomerImage {
-  animation:mirror 1s infinite
+  animation:mirror 1s infinite;
 }
 
 @keyframes mirror {
