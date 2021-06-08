@@ -4,7 +4,7 @@ html {
 .overlay {
   animation: rotate 2s infinite;
 }
-.bloomerImage {
+#bloomerImage {
   animation: rotate 2s infinite;
 }
 @keyframes rotate {
