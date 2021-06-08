@@ -22,7 +22,7 @@
          width: 100%;
          opacity: 0;
          transition: .5s ease;
-         background-color: #008CBA;
+         background-color: #000000;
          }
          .container:hover .overlay {
          opacity: 1;
@@ -56,15 +56,15 @@
          
       </script>
    </head>
-   <body onload="playDoomer()" onmouseenter="playBloomer()" onmouseout="playDoomer()">
+   <body onload="playDoomer()" onmouseenter="playBloomer()" onmouseout="playDoomer()" style="background-color:black;">
       <audio id="doomerAudio" src="doomer_audio.mp3" type="audio/mpeg" preload="auto">
       </audio>
       <audio id="bloomerAudio" src="bloomer_audio.mp3" type="audio/mpeg" preload="auto">
       </audio>
       <div class="container">
-         <img id="doomerImage" src="doomer_img.jpg" alt="Doomer" class="image" align="middle"></img>
+         <img id="doomerImage" src="doomer_img.jpg" alt="Doomer" class="image"></img>
          <div class="overlay">
-            <img id="bloomerImage" src="bloomer_img.jpg" alt="Bloomer" class="image" align="middle"></img>
+            <img id="bloomerImage" src="bloomer_img.jpg" alt="Bloomer" class="image"></img>
          </div>
       </div>
    </body>
