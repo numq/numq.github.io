@@ -40,11 +40,6 @@
          }
       </style>
       <script>
-         var da = document.getElementById("doomerAudio");
-         var ba = document.getElementById("bloomerAudio");
-         
-         da.volume = 0.5;
-         ba.volume = 0.5;
          
          document.getElementById("bloomerAudio").volume = 0.5;
          document.getElementById("doomerAudio").volume = 0.5;
@@ -52,15 +47,11 @@
          function playDoomer(){
          	document.getElementById("bloomerAudio").pause();
          	document.getElementById("doomerAudio").play();
-            //ba.pause();
-            //da.play();
          }
          
          function playBloomer(){
          	document.getElementById("doomerAudio").pause();
          	document.getElementById("bloomerAudio").play();
-            //da.pause();
-            //ba.play();
          }
          
       </script>
@@ -71,9 +62,9 @@
       <audio id="bloomerAudio" src="bloomer_audio.mp3" type="audio/mpeg" preload="auto">
       </audio>
       <div class="container">
-         <img id="doomerImage" src="doomer_img.jpg" alt="Doomer" class="image"></img>
+         <img id="doomerImage" src="doomer_img.jpg" alt="Doomer" class="image" align="middle"></img>
          <div class="overlay">
-            <img id="bloomerImage" src="bloomer_img.jpg" alt="Bloomer" class="image"></img>
+            <img id="bloomerImage" src="bloomer_img.jpg" alt="Bloomer" class="image" align="middle"></img>
          </div>
       </div>
    </body>
