@@ -10,7 +10,7 @@ p {
   }
 }
 
-img:hover {
+img {
   animation-name: mirror;
   animation-duration: infinite;
 }
