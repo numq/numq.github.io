@@ -5,15 +5,15 @@
     <link href="/style.css" rel="stylesheet">
   </head>
 
-  <body onload="playDoomer()">
+  <body>
 
-    <div>
+    <div onload="playDoomer()" height="100vh">
       <audio id="doomerAudio" src="doomer_audio.mp3" type="audio/mpeg" preload="auto" loop="loop"></audio>
       <audio id="bloomerAudio" src="bloomer_audio.mp3" type="audio/mpeg" preload="auto" loop="loop"></audio>
       <div class="container" onmouseenter="playBloomer()" onmouseout="playDoomer()">
-        <img id="doomer" src="doomer_img.jpg" alt="Doomer" height="auto">
+        <img id="doomer" src="doomer_img.jpg" alt="Doomer" height="100vh">
         <div class="overlay">
-          <img id="bloomer" src="bloomer_img.jpg" alt="Bloomer" height="auto">
+          <img id="bloomer" src="bloomer_img.jpg" alt="Bloomer" height="100vh">
         </div>
       </div>
     </div>
