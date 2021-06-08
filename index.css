@@ -2,31 +2,14 @@ html {
   background: black;
 }
 .overlay {
-  position:relative;
-  animation:slideIn infinite linear;
+  animation: pulse 5s infinite;
 }
 
-.container {
-  position:relative;
-  animation:slideIn infinite linear;
-}
-
-.img {
-  position:relative;
-  animation:slideIn infinite;
-}
-
-@keyframes mirror {
-  transform: rotateX(180deg);
-}
-
-@keyframes slideIn {
-  0%, 100% {
-    transform: translate(10px) rotate(0deg);
-    color: red;
+@keyframes pulse {
+  0% {
+    background-color: #001F3F;
   }
-  25% {
-    transform: translate(125px) rotate(360deg);
-    color: green;
+  100% {
+    background-color: #FF4136;
   }
 }
