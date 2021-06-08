@@ -1,22 +1,40 @@
-html {
-	background: black;
+body {
+  background: black;
 }
 
-/* .img {
-	position: absolute;
-	animation: rotate 2s infinite;
-	animation-fill-mode: forwards;
+.container {
+  position: relative;
+  display: block;
 }
 
-#bloomerImage {
-	position: absolute;
-	animation: rotate 2s infinite;
-	animation-fill-mode: forwards;
+.overlay {
+  position: absolute;
+  transition: 0.5s ease;
+  display: none;
 }
 
-@keyframes rotate {
-	transform: rotateY(180deg);
+.container:hover {
+  display: block;
 }
- */
 
-@keyframes mirror{ transform: rotateY(180deg) }
+.container:hover .overlay {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+}
+
+#bloomer {
+  animation: rotate-it 1s infinite steps(2, end);
+}
+
+@keyframes rotate-it {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateY(360deg);
+  }
+}
