@@ -1,8 +1,9 @@
 html {
-  background: #000000;
+  background: black;
 }
 
 .img {
+  position: relative;
   animation: rotate 2s infinite;
 }
 
