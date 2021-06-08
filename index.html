@@ -5,35 +5,26 @@
     <link href="/style.css" rel="stylesheet">
   </head>
 
-  <body onload="playOnLoad()" onmouseenter="playBloomer()" onmouseout="playDoomer()">
-
+  <body onload="playDoomer()" onmouseenter="playBloomer()" onmouseout="playDoomer()">
     <div class="container">
-      <img id="doomer" src="doomer_img.jpg" alt="Doomer" height="auto" width="auto">
+      <img id="doomer" src="/doomer_img.jpg" alt="Doomer">
       <div class="overlay">
-        <img id="bloomer" src="bloomer_img.jpg" alt="Bloomer" height="auto" width="auto">
+        <img id="bloomer" src="/bloomer_img.jpg" alt="Bloomer">
       </div>
     </div>
 
-    <audio id="doomerAudio" src="file:///C:/Users/Alerion/Documents/DoomerBloomer/doomer_audio.mp3" type="audio/mpeg" preload="auto" loop="loop"></audio>
-    <audio id="bloomerAudio" src="file:///C:/Users/Alerion/Documents/DoomerBloomer/bloomer_audio.mp3" type="audio/mpeg" preload="auto" loop="loop"></audio>
-    <script type="text/javascript">
-      var da = document.getElementById("doomerAudio");
-      var ba = document.getElementById("bloomerAudio");
+    <audio id="doomerAudio" src="/doomer_audio.mp3" type="audio/mpeg" loop="loop"></audio>
+    <audio id="bloomerAudio" src="/bloomer_audio.mp3" type="audio/mpeg" loop="loop"></audio>
 
-      var playOnLoad = () => {
-        da.play();
-        ba.play();
-        ba.volume = 0.0;
-      }
-
+    <script>
       function playDoomer() {
-        da.volume = 0.5;
-        ba.volume = 0.0;
+        document.getElementById("bloomerAudio").pause();
+        document.getElementById("doomerAudio").play();
       }
 
       function playBloomer() {
-        da.volume = 0.0;
-        ba.volume = 0.5;
+        document.getElementById("doomerAudio").pause();
+        document.getElementById("bloomerAudio").play();
       }
 
     </script>
@@ -41,3 +32,4 @@
   </body>
 
 </html>
+
