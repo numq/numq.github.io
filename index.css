@@ -1,17 +1,8 @@
 .overlay {
   position:relative;
-  animation:mirror 4s infinite;
-  -webkit-animation:mirror 4s infinite;
+  animation:mirror infinite;
 }
 
 @keyframes mirror {
-  0%{ transform: rotateX(0deg); }
-  50%{ transform: rotateX(180deg); }
-  100%{ transform: rotateX(-180deg); }
-}
-
-@-webkit-keyframes mirror {
-  0%{ transform: rotateX(0deg); }
-  50%{ transform: rotateX(180deg); }
-  100%{ transform: rotateX(-180deg); }
+  transform: rotateX(180deg);
 }
