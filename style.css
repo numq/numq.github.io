@@ -30,7 +30,7 @@ body {
 }
 
 #doomer {
-  animation: blur-it 5s infinite linear;
+  animation: blur-it 5s infinite ease;
 }
 
 @keyframes rotate-it {
@@ -47,10 +47,10 @@ body {
 
   0%,
   100% {
-    filter: blur(1px);
+    filter: blur(0px);
   }
 
   50% {
-    filter: blur(5px);
+    filter: blur(2px);
   }
 }
