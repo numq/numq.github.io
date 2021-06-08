@@ -27,6 +27,13 @@ body {
   animation: rotate-it 1s infinite steps(2, end);
 }
 
+#doomer {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 @keyframes rotate-it {
   0% {
     transform: rotateY(0deg);
