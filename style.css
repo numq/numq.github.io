@@ -2,13 +2,14 @@ body {
   background: black;
 }
 
-.overlay {
-  position: absolute;
-  transition: 0.5s ease;
-  display: none;
+.container {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
-.container:hover .overlay {
+.container:hover #bloomer {
   top: 0;
   bottom: 0;
   left: 0;
@@ -17,6 +18,13 @@ body {
 }
 
 #bloomer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: 0.5s ease;
+  display: none;
   animation: rotate-it 1s infinite steps(2, end);
 }
 
