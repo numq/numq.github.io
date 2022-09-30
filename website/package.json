@@ -1,6 +1,6 @@
 {
   "name": "website",
-  "homepage": "https://numq.github.io/website",
+  "homepage": "https://numq.github.io/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
