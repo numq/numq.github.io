@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support</title>
+    <style>
+        :root {
+            --bg: #1a1b26;
+            --card-bg: #24283b;
+            --text: #a9b1d6;
+            --accent: #7aa2f7;
+            --pink: #ff79c6;
+            --green: #9ece6a;
+            --border: #414868;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'JetBrains Mono', monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 60px 20px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 480px;
+            width: 100%;
+        }
+
+        header {
+            margin-bottom: 30px;
+            border-left: 2px solid var(--pink);
+            padding-left: 15px;
+        }
+
+        h1 {
+            font-size: 1.2rem;
+            margin: 0;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            font-size: 0.85rem;
+            color: var(--text);
+            opacity: 0.6;
+            margin-top: 8px;
+        }
+
+        .grid {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 16px;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            position: relative;
+        }
+
+        .card:hover {
+            border-color: var(--accent);
+            background: #292e42;
+        }
+
+        .card:active {
+            background: #3b4261;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 6px;
+        }
+
+        .coin-name {
+            font-weight: bold;
+            color: var(--accent);
+            font-size: 1rem;
+        }
+
+        .network-tag {
+            font-size: 0.65rem;
+            background: var(--border);
+            padding: 1px 6px;
+            color: #fff;
+        }
+
+        .address {
+            font-size: 0.8rem;
+            word-break: break-all;
+            color: #cfc9c2;
+            opacity: 0.8;
+            font-family: 'Fira Code', monospace;
+        }
+
+        .copy-status {
+            position: absolute;
+            right: 12px;
+            bottom: 12px;
+            font-size: 0.65rem;
+            color: var(--green);
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .repo-link {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .repo-link:hover {
+            border-color: var(--pink);
+            color: var(--pink);
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.7rem;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Support</h1>
+        <p class="subtitle">Developing <a href="https://github.com/numq/haskcore" class="repo-link">haskcore</a>, a
+            native Haskell IDE</p>
+    </header>
+
+    <div class="grid">
+        <div class="card" onclick="window.open('https://boosty.to/numq', '_blank')"
+             style="border-color: var(--pink); margin-bottom: 20px;">
+            <div class="card-header">
+                <span class="coin-name" style="color: var(--pink);">Boosty</span>
+                <span class="network-tag">Card / PayPal / RUB</span>
+            </div>
+        </div>
+
+        <div class="card" onclick="copyAddr(this, 'bc1qs6qq0fkqqhp4whwq8u8zc5egprakvqxewr5pmx')">
+            <div class="card-header">
+                <span class="coin-name">BTC</span>
+                <span class="network-tag">Bitcoin</span>
+            </div>
+            <span class="address">bc1qs6qq0fkqqhp4whwq8u8zc5egprakvqxewr5pmx</span>
+            <span class="copy-status">COPIED</span>
+        </div>
+
+        <div class="card" onclick="copyAddr(this, '0x3147bEE3179Df0f6a0852044BFe3C59086072e12')">
+            <div class="card-header">
+                <span class="coin-name">ETH / POL</span>
+                <span class="network-tag">Ethereum / Polygon</span>
+            </div>
+            <span class="address">0x3147bEE3179Df0f6a0852044BFe3C59086072e12</span>
+            <span class="copy-status">COPIED</span>
+        </div>
+
+        <div class="card" onclick="copyAddr(this, '361Ls8dvifGUNeh22Afg1RbwfSyNb28GMaAbEHfEdMbz')">
+            <div class="card-header">
+                <span class="coin-name">SOL</span>
+                <span class="network-tag">Solana</span>
+            </div>
+            <span class="address">361Ls8dvifGUNeh22Afg1RbwfSyNb28GMaAbEHfEdMbz</span>
+            <span class="copy-status">COPIED</span>
+        </div>
+
+        <div class="card" onclick="copyAddr(this, 'UQB4udFbps8mHZZTQVtmBBj7uWMMtQ1Vr47BnN-fQr0pRjXb')">
+            <div class="card-header">
+                <span class="coin-name">TON</span>
+                <span class="network-tag">The Open Network</span>
+            </div>
+            <span class="address">UQB4udFbps8mHZZTQVtmBBj7uWMMtQ1Vr47BnN-fQr0pRjXb</span>
+            <span class="copy-status">COPIED</span>
+        </div>
+
+        <div class="card" onclick="copyAddr(this, 'ltc1qe2plst9c62enh2aqz3fvaed8yfnelmz4gtep8j')">
+            <div class="card-header">
+                <span class="coin-name">LTC</span>
+                <span class="network-tag">Litecoin</span>
+            </div>
+            <span class="address">ltc1qe2plst9c62enh2aqz3fvaed8yfnelmz4gtep8j</span>
+            <span class="copy-status">COPIED</span>
+        </div>
+
+        <div class="card" onclick="copyAddr(this, 'TKznmR65yhPt5qmYCML4tNSWFeeUkgYSEV')">
+            <div class="card-header">
+                <span class="coin-name">USDT</span>
+                <span class="network-tag">TRC20</span>
+            </div>
+            <span class="address">TKznmR65yhPt5qmYCML4tNSWFeeUkgYSEV</span>
+            <span class="copy-status">COPIED</span>
+        </div>
+    </div>
+
+    <footer>
+        <a href="https://github.com/numq" class="repo-link">numq</a> / 2026
+    </footer>
+</div>
+
+<script>
+    function copyAddr(el, addr) {
+        navigator.clipboard.writeText(addr).then(() => {
+            const status = el.querySelector('.copy-status');
+            status.style.opacity = '1';
+            setTimeout(() => {
+                status.style.opacity = '0';
+            }, 1000);
+        });
+    }
+</script>
+
+</body>
+</html>
