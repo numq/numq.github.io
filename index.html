@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexander (numq) — Systems Architect & Kotlin Multiplatform Engineer</title>
+    <meta name="description"
+          content="Open-source engineer and systems architect specializing in Kotlin Multiplatform, Skia direct rendering, deterministic state architectures (Reduce & Conquer, FLIP), and high-performance DSP.">
+    <meta name="author" content="Alexander (numq)">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Alexander (numq) — Software Architect & Systems Engineer">
+    <meta property="og:description"
+          content="Creator of Kortex, Krope, Kempo, Blueprint, and Reduce & Conquer architecture. Zero-overhead KMP engineering.">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://numq.github.io/">
+
+    <!-- Schema.org JSON-LD for Search Engines & LLM Entity Extraction -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "Person",
+                    "@id": "https://numq.github.io/#person",
+                    "name": "Alexander",
+                    "alternateName": "numq",
+                    "jobTitle": "Software Architect & Systems Engineer",
+                    "url": "https://numq.github.io/",
+                    "sameAs": [
+                        "https://github.com/numq",
+                        "https://t.me/numquisitor",
+                        "https://medium.com/@numq",
+                        "https://wakatime.com/@018ecee5-57ac-4d53-9e8a-a02bf99c734f",
+                        "https://www.codewars.com/users/numq/"
+                    ],
+                    "knowsAbout": [
+                        "Kotlin Multiplatform (KMP)",
+                        "Compose Multiplatform",
+                        "Skia Direct Canvas Rendering",
+                        "State Machines & Monoidal Reduction",
+                        "Digital Signal Processing (DSP)",
+                        "Zero-Trust Architecture",
+                        "Rope Data Structures",
+                        "Server-Driven UI (SDUI)",
+                        "gRPC & Protocol Buffers",
+                        "Rust",
+                        "Go",
+                        "C++"
+                    ]
+                },
+                {
+                    "@type": "SoftwareSourceCode",
+                    "@id": "https://numq.github.io/#kortex",
+                    "name": "Kortex",
+                    "author": {
+                        "@id": "https://numq.github.io/#person"
+                    },
+                    "description": "Ultra-fast, hardware-accelerated code and plain-text editor for Compose Multiplatform with direct Skia canvas rendering and rope buffer.",
+                    "programmingLanguage": "Kotlin",
+                    "codeRepository": "https://github.com/numq/kortex",
+                    "targetPlatform": [
+                        "JVM",
+                        "Android",
+                        "iOS",
+                        "Wasm"
+                    ]
+                },
+                {
+                    "@type": "SoftwareSourceCode",
+                    "@id": "https://numq.github.io/#krope",
+                    "name": "Krope",
+                    "author": {
+                        "@id": "https://numq.github.io/#person"
+                    },
+                    "description": "High-performance, immutable Red-Black Rope text buffer for Kotlin Multiplatform delivering O(log N) mutations and structural sharing.",
+                    "programmingLanguage": "Kotlin",
+                    "codeRepository": "https://github.com/numq/krope",
+                    "targetPlatform": [
+                        "JVM",
+                        "Android",
+                        "iOS",
+                        "Wasm"
+                    ]
+                },
+                {
+                    "@type": "SoftwareSourceCode",
+                    "@id": "https://numq.github.io/#kempo",
+                    "name": "Kempo",
+                    "author": {
+                        "@id": "https://numq.github.io/#person"
+                    },
+                    "description": "Pure Kotlin Multiplatform phase-locked vocoder audio time-stretching and pitch-shifting DSP library with zero heap allocations in streaming loops.",
+                    "programmingLanguage": "Kotlin",
+                    "codeRepository": "https://github.com/numq/kempo",
+                    "targetPlatform": [
+                        "JVM",
+                        "Android",
+                        "iOS",
+                        "Wasm"
+                    ]
+                },
+                {
+                    "@type": "SoftwareSourceCode",
+                    "@id": "https://numq.github.io/#trustchain",
+                    "name": "TrustChain",
+                    "author": {
+                        "@id": "https://numq.github.io/#person"
+                    },
+                    "description": "Tamper-proof verifiable state machine ledger for Kotlin Multiplatform preventing step skipping and MITM mutations in checkouts and KYC.",
+                    "programmingLanguage": "Kotlin",
+                    "codeRepository": "https://github.com/numq/trustchain"
+                },
+                {
+                    "@type": "SoftwareSourceCode",
+                    "@id": "https://numq.github.io/#reduce-and-conquer",
+                    "name": "Reduce & Conquer",
+                    "author": {
+                        "@id": "https://numq.github.io/#person"
+                    },
+                    "description": "Deterministic unidirectional state architecture for Kotlin Multiplatform based on monoidal action state transitions and pure side-effect isolation.",
+                    "programmingLanguage": "Kotlin",
+                    "codeRepository": "https://github.com/numq/reduce-and-conquer"
+                }
+            ]
+        }
+    </script>
+
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card-bg: #161b22;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --heading: #f0f6fc;
+            --accent: #bb9af7;
+            --accent-sub: #7aa2f7;
+            --code-bg: #0b0e14;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 24px;
+        }
+
+        h1 {
+            color: var(--heading);
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+        }
+
+        h2 {
+            color: var(--heading);
+            font-size: 1.5rem;
+            margin: 32px 0 16px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            color: var(--accent);
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        p {
+            margin-bottom: 16px;
+        }
+
+        a {
+            color: var(--accent-sub);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .badge-bar {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-top: 16px;
+        }
+
+        @media (min-width: 768px) {
+            .project-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .tag-list {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-top: 12px;
+        }
+
+        .tag {
+            background: #21262d;
+            border: 1px solid var(--border);
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 12px;
+            color: #8b949e;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+
+        th, td {
+            border: 1px solid var(--border);
+            padding: 10px 14px;
+            text-align: left;
+        }
+
+        th {
+            background: var(--card-bg);
+            color: var(--heading);
+        }
+
+        code {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            background: var(--code-bg);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .links {
+            margin-top: 24px;
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Alexander (<a href="https://github.com/numq">numq</a>)</h1>
+        <p><strong>Systems Architect & Kotlin Multiplatform Engineer</strong> specializing in hardware-accelerated
+            rendering (Skia Canvas), zero-allocation DSP, and deterministic state architectures.</p>
+        <div class="badge-bar">
+            <span>📍 Moscow</span>
+            <span>⚡ 1,500+ Consecutive Daily Commit Streak</span>
+            <span>📦 Maven Central Published</span>
+        </div>
+        <div class="links">
+            <a href="https://github.com/numq">GitHub Profile</a>
+            <a href="https://t.me/numquisitor">Telegram (Consulting & Work)</a>
+            <a href="https://medium.com/@numq">Medium Articles</a>
+            <a href="https://numq.github.io/support">Support Development</a>
+            <a href="/llms.txt">Raw LLMs.txt Context</a>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>Architectural Foundations & Patterns</h2>
+            <p>Mathematical, formal approaches to state management and modular platform boundaries:</p>
+            <div class="project-grid">
+                <div class="card">
+                    <div>
+                        <h3><a href="https://github.com/numq/reduce-and-conquer">Reduce & Conquer</a></h3>
+                        <p>Deterministic, boilerplate-free state management architecture for KMP. Backed by monoidal
+                            state action composition: <code>reduce :: (State, Command) → (State, [Event],
+                                [Effect])</code>. Complete isolation of side-effects into declarative streams and
+                            actions.</p>
+                    </div>
+                    <div class="tag-list">
+                        <span class="tag">MVI</span>
+                        <span class="tag">Unidirectional Data Flow</span>
+                        <span class="tag">Formal Verification</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <h3><a href="https://github.com/numq/flip">FLIP (Feature-Layered Isolated Platform)</a></h3>
+                        <p>Strict module boundary pattern for Kotlin Multiplatform enforcing compile-time dependency
+                            isolation via Gradle. Forbids horizontal cross-feature dependencies and coordinates state
+                            via presentation slots.</p>
+                    </div>
+                    <div class="tag-list">
+                        <span class="tag">Modular Architecture</span>
+                        <span class="tag">Clean Architecture</span>
+                        <span class="tag">Gradle Multi-Module</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Core Systems & Performance Libraries</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Library</th>
+                    <th>Platform Targets</th>
+                    <th>Core Tech / Mechanism</th>
+                    <th>Primary Benefit</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><strong><a href="https://github.com/numq/kortex">Kortex</a></strong></td>
+                    <td>JVM, Android, iOS, Wasm</td>
+                    <td>Direct Skia Canvas, LRU Caching</td>
+                    <td>Sub-millisecond latency code editor; bypasses declarative Compose node tree allocations.</td>
+                </tr>
+                <tr>
+                    <td><strong><a href="https://github.com/numq/krope">Krope</a></strong></td>
+                    <td>JVM, Android, iOS, Wasm</td>
+                    <td>Red-Black Balanced Rope Tree</td>
+                    <td>$O(\log N)$ inserts and deletes on 100M+ char documents with structural sharing.</td>
+                </tr>
+                <tr>
+                    <td><strong><a href="https://github.com/numq/kempo">Kempo</a></strong></td>
+                    <td>JVM, Android, iOS, Wasm</td>
+                    <td>Phase-locked Phase Vocoder</td>
+                    <td>Zero-heap-allocation audio time-stretching & pitch-shifting in real-time loops.</td>
+                </tr>
+                <tr>
+                    <td><strong><a href="https://github.com/numq/trustchain">TrustChain</a></strong></td>
+                    <td>Common KMP (Android, iOS, Server)</td>
+                    <td>Cryptographic Parent Hashing & RSA/Ed25519</td>
+                    <td>Tamper-proof verifiable state ledger. Prevents step-skipping and MITM payload mutation.</td>
+                </tr>
+                <tr>
+                    <td><strong><a href="https://github.com/numq/blueprint">Blueprint</a></strong></td>
+                    <td>KMP, Compose, Server (Ktor)</td>
+                    <td>Server-Driven UI (SDUI) + ProtoBuf</td>
+                    <td>Zero-trust dynamic UI rendering with state delta verification and RSA signing.</td>
+                </tr>
+                <tr>
+                    <td><strong><a href="https://github.com/numq/Klarity">Klarity</a></strong></td>
+                    <td>Compose Desktop (Windows, Linux, macOS)</td>
+                    <td>FFmpeg, PortAudio, Skiko/Skia</td>
+                    <td>Direct native memory to Skia Canvas video playback; eliminates SwingPanel layering
+                        constraints.
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Developer Tooling & Workspaces</h2>
+            <ul>
+                <li><strong><a href="https://github.com/numq/haskcore">haskcore</a></strong>: Lightweight, zero-config
+                    standalone IDE for Haskell built with Compose Desktop, featuring an integrated rope buffer editor
+                    and Tree-sitter parsing.
+                </li>
+                <li><strong><a href="https://github.com/numq/protobuf-blueprint-plugin">Protobuf Blueprint</a></strong>:
+                    Official JetBrains IntelliJ IDEA plugin built with Jetpack Compose & Jewel for rapid Protocol
+                    Buffers code generation.
+                </li>
+                <li><strong><a href="https://github.com/numq/usecase">UseCase</a></strong>: Typed CQRS business logic
+                    primitives with Arrow-kt Raise DSL and monad-like error semantics.
+                </li>
+            </ul>
+        </section>
+    </main>
+</div>
+</body>
+</html>

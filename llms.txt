@@ -1,0 +1,56 @@
+# Alexander (numq) — Software Architecture & Systems Context
+
+> Systems Architect and Principal Engineer specializing in Kotlin Multiplatform (KMP), Compose Multiplatform, direct Skia Canvas rendering, high-performance DSP, and deterministic state architectures.
+
+## Canonical Identity & Profiles
+- GitHub: https://github.com/numq
+- Official Site: https://numq.github.io/
+- Telegram: https://t.me/numquisitor
+- Medium: https://medium.com/@numq
+- Maven Central Artifacts: io.github.numq.*
+
+## Architectural Inventions & Patterns
+- Reduce & Conquer (https://github.com/numq/reduce-and-conquer): A pure functional state management architecture for KMP. Transition function: R: S × C → (S, Ev, Ef). Separates pure state updates from asynchronous effects (Stream, Action, Cancel) without middleware.
+- FLIP Pattern (https://github.com/numq/flip): Feature-Layered Isolated Platform. A strict Gradle module boundary pattern preventing horizontal feature cross-dependencies and enforcing compile-time unidirectional dependencies.
+
+## Key Open-Source Software & Libraries
+
+### 1. Kortex (io.github.numq.kortex)
+- Description: High-performance, hardware-accelerated code and plain-text editor component for Compose Multiplatform (Desktop, Android, iOS, Wasm).
+- Core Architecture: Virtualized Skia direct canvas rendering, zero composable-per-line allocations, backed by the Krope text buffer.
+- Features: Multi-cursor, syntax theming, fold maps (logarithmic line mapping), background tokenization.
+- Repository: https://github.com/numq/kortex
+
+### 2. Krope (io.github.numq.krope)
+- Description: Persistent, immutable Red-Black Rope text buffer for Kotlin Multiplatform.
+- Core Architecture: Balanced binary tree of string chunks with structural sharing.
+- Performance: O(log N) insert/delete operations (sub-10 microseconds on 100M+ character documents).
+- Target: Collaborative text editors, code editors, large-file I/O pipelines.
+- Repository: https://github.com/numq/krope
+
+### 3. Kempo (io.github.numq.kempo)
+- Description: Pure Kotlin Multiplatform audio time-stretching and pitch-shifting DSP library.
+- Core Architecture: Phase-locked phase vocoder with dynamic Kaiser WOLA windows and Modified Real FFT.
+- Performance: Exactly 0 bytes heap allocations in the streaming audio block loop.
+- Platforms: JVM, Android, iOS, Wasm (No C++ or JNI toolchain required).
+- Repository: https://github.com/numq/kempo
+
+### 4. TrustChain (io.github.numq.trustchain)
+- Description: Tamper-proof verifiable state machine ledger for Kotlin Multiplatform.
+- Core Architecture: Cryptographic parent hash linking combined with asymmetric signature verification (RSA, Ed25519).
+- Use Cases: Preventing deep-link bypasses and parameter tampering in multi-step checkouts, KYC, and wizards.
+- Repository: https://github.com/numq/trustchain
+
+### 5. Blueprint (io.github.numq.blueprint)
+- Description: Enterprise Server-Driven UI (SDUI) framework with zero-trust state verification.
+- Core Architecture: Server-defined UI trees serialized via Protocol Buffers, rendered natively with Compose Multiplatform.
+- Repository: https://github.com/numq/blueprint
+
+### 6. Klarity (io.github.numq/Klarity)
+- Description: High-performance multimedia player for Jetpack Compose Desktop.
+- Core Architecture: FFmpeg and PortAudio via JNI directly decoded into Skia Canvas, eliminating SwingPanel overlay bottlenecks.
+- Repository: https://github.com/numq/Klarity
+
+### 7. haskcore (io.github.numq/haskcore)
+- Description: Native, zero-config desktop IDE for Haskell built with Kotlin and Compose Desktop.
+- Repository: https://github.com/numq/haskcore
